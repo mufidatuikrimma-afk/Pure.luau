@@ -1,0 +1,99 @@
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/jensonhirst/Orion/main/source"))()
+
+-- Menampilkan notifikasi Loading
+
+OrionLib:MakeNotification({
+
+    Name = "DmxeAlt super private gui Loading...",
+
+    Content = "Harap tunggu sebentar",
+
+    Image = "rbxassetid://3203186339",
+
+    Time = 3
+
+})
+
+wait(3)
+
+-- Membuat Window dengan Logo dan animasi Intro
+
+local Window = OrionLib:MakeWindow({
+
+    Name = "DmxeAlt super private gui | Script Hub",
+
+    HidePremium = false,
+
+    SaveConfig = true,
+
+    ConfigFolder = "MizuHubConfig",
+
+    IntroEnabled = true,
+
+    IntroText = "DmxeAlt super private gui",
+
+    IntroIcon = "rbxassetid://3203186339",  -- Logo untuk Intro
+
+    Dragable = true  -- Menambahkan fitur dragable agar bisa digeser di layar
+
+})
+
+-- Tab Universal Scripts
+
+local UniversalTab = Window:MakeTab({
+
+    Name = "Universal Scripts",
+
+    Icon = "rbxassetid://3203186339",  -- Ganti dengan logo yang kamu inginkan
+
+    PremiumOnly = false
+
+})
+
+UniversalTab:AddButton({
+
+    Name = "Fly Script",
+
+    Callback = function()
+
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fly-GUI-V3-9511"))()
+
+    end
+
+})
+
+UniversalTab:AddButton({
+
+    Name = "Rc7",
+
+    Callback = function()
+
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Blue-Rc7-Remake-By-Stygian-48717"))()
+
+    end
+
+})
+
+-- Tab Game Specific Scripts
+
+local GameTab = Window:MakeTab({
+
+    Name = "Game Scripts",
+
+    Icon = "rbxassetid://3203186339",  -- Ganti dengan logo yang kamu inginkan
+
+    PremiumOnly = false
+
+})
+
+GameTab:AddButton({
+
+    Name = "Ghost Hub",
+
+    Callback = function()
+
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghosthub-free-premium-features-62168"))()
+
+    end
+
+})
